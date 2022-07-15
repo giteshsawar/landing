@@ -18,6 +18,16 @@
   </head>
 
   <body>
-    <img src="./images/landing-full.png" width="100%" />
+    <img id="bodyImg" width="100%" />
   </body>
+  <script>
+    const windowWidth = window.innerWidth;
+    const imgSrc =
+      windowWidth < 700
+        ? "./images/landing-full-mobile.png"
+        : "./images/landing-full.png";
+
+    const image = document.getElementById("bodyImg");
+    image.src = imgSrc;
+  </script>
 </html>
